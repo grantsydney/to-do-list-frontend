@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class EditableLabel extends React.Component {
+export default class EditableItemLabel extends React.Component {
     constructor(props) {
         super(props);
 
