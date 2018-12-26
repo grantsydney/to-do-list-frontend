@@ -12,8 +12,21 @@ class App extends Component {
 
   state={
     lists: [],
-    clickedListId: ''
+    clickedListId: '',
+    currentText: 'Does this work???'
   }
+
+  _handleFocus(text) {
+       console.log('Focused with text: ' + text);
+   }
+
+   _handleFocusOut(text) {
+       console.log('Left editor with text: ' + text);
+
+   }
+
+
+
 
 
   //fetch list data and set State
@@ -33,18 +46,19 @@ addList = (list) => {
     }, ()=>console.log(this.state.lists))
   }
 
+
   //*FUNCTION* add item to list
 
-  addItem = (item) => {
-    debugger
-      this.setState({
-        items: [...this.state.lists.items, item]
-      }, ()=>console.log(this.state.items))
-    }
+  // addItem = (item) => {
+  //
+  //   debugger
+  //     this.setState({
+  //       items: [...this.state.lists.items, item]
+  //     }, ()=>console.log(this.state.items))
+  //   }
 
 //find list by id
 getListId = clickedListId => {
-  console.log(clickedListId)
   this.setState({
     clickedListId: clickedListId
   })
@@ -60,6 +74,7 @@ renderList() {
   render() {
     return (
       <div>
+
       <Header />
       <ListForm addList={this.addList} />
       <ListsContainer lists={this.state.lists} getListId={this.getListId}/>
