@@ -33,16 +33,16 @@ export default class EditableItemLabel extends React.Component {
     _handleChange() {
       this.setState({
           text: this.textInput.value,
-        });
-//not getting last character to set state and then sending patch before fullu loaded
-      fetch(`http://localhost:3001/api/v1/users/1/lists/${this.props.clickedListId}/items/${this.props.id}`, {
-        method: 'PATCH',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          name: this.state.text
-        })
-      })
+        }, ()=>
 
+        fetch(`http://localhost:3001/api/v1/users/1/lists/${this.props.clickedListId}/items/${this.props.id}`, {
+          method: 'PATCH',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            name: this.state.text
+          })
+        })
+      );
     }
 
     render() {

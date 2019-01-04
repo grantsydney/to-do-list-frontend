@@ -16,8 +16,6 @@ class ItemForm extends React.Component {
     })
   }
 
-
-
   handleSubmit = (event) => {
     event.preventDefault()
 
@@ -28,25 +26,27 @@ class ItemForm extends React.Component {
         name: this.state.name
       })
     })
-    //   .then(r=>r.json())
-    //   .then(l => this.props.addItem(l)
-    // )
+      .then(r=>r.json())
+      .then(item => this.props.addItemToList(item)
+    )
 
-      //get form to go back to blank input fields
+    //get form to go back to blank input fields
     this.setState({
       name: ''
     })
   }
 
+
+
+
   render() {
     return (
       <div>
-        <h3>Add a Item!</h3>
         <Form onSubmit={this.handleSubmit} onChange={this.handleChange}>
-          <Form.Group widths="equal">
-            <Form.Input fluid label="Name" placeholder="Name" name="name" value={this.state.name} />
+          <Form.Group inline>
+            <Form.Input width={8} placeholder={`Add Item to ${this.props.listName} list`} name="name" value={this.state.name} />
+            <Form.Button>Submit</Form.Button>
           </Form.Group>
-          <Form.Button>Submit</Form.Button>
         </Form>
       </div>
     )

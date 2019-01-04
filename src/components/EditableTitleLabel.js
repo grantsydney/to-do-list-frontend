@@ -6,7 +6,7 @@ export default class EditableTitleLabel extends React.Component {
 
         this.state = {
         	isEditing: this.props.isEditing || false,
-			text: this.props.text || "",
+			    text: this.props.text || "",
         };
 
         this._handleFocus = this._handleFocus.bind(this);
@@ -34,7 +34,6 @@ export default class EditableTitleLabel extends React.Component {
       this.setState({
           text: this.textInput.value,
         });
-//not getting last character to set state and then sending patch before fullu loaded
       fetch(`http://localhost:3001/api/v1/users/1/lists/${this.props.clickedListId}`, {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
