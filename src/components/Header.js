@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = (props) => {
   return (
-    <h1 className="header">My To-Dos</h1>
+    <h1 className="header">Things I Didn't Do Yesterday</h1>
   )
 }
 

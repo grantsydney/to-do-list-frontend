@@ -7,7 +7,7 @@ const Splash = () => {
 
   <div className="splash-page">
 
-    <NavLink to="/ToDo" exact className="to-do-link">Click Here To Get Started</NavLink>
+    <NavLink to="/ToDo" exact className="to-do-link">Click me!</NavLink>
   </div>
   );
 };

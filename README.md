@@ -1,79 +1,9 @@
-<Form.Input width={6} placeholder="Color?" name="color" value={this.state.color} />
+An app for creating color-coded to-do lists to organize all aspects of your daily life
 
+Features:
+--> to-do lists and items are color-coded
+--> ability to edit an item in-line for a seamless user experience
 
-//take out list details when clicked
-
-<div id="detail-container">
-   {this.props.clickedListId ? <h1 className="list-details-title-text">{this.props.renderList.name}</h1>
-  //<EditableTitleLabel
-  //           clickedListId={this.props.clickedListId}
-  //           id={this.props.clickedListId}
-  //           key={this.props.id}
-  //           text={this.props.renderList.name}
-  //           labelClassName='myLabelClass'
-  //           inputClassName='myInputClass'
-  //           inputWidth='200px'
-  //           inputHeight='25px'
-  //           inputMaxLength='50'
-  //           labelFontWeight='bold'
-  //           inputFontWeight='bold'
-  //           onFocus={this._handleFocus}
-  //           onFocusOut={this._handleFocusOut}
-  //       />
-     : null}
-
-     <ul>{this.props.clickedListId ? this.props.renderList.items.map(i=>
-       // <li key={i.id}>{i.name}</li>
-       <div key={i.id}>
-         <span className="list-details-items-text">
-           <li><EditableItemLabel
-                   item={i}
-                   clickedListId={this.props.clickedListId}
-                   id={i.id}
-                   text={i.name}
-                   labelClassName='myLabelClass'
-                   inputClassName='myInputClass'
-                   inputWidth='200px'
-                   inputHeight='25px'
-                   inputMaxLength='50'
-                   labelFontWeight='bold'
-                   inputFontWeight='bold'
-                   onFocus={this._handleFocus}
-                   onFocusOut={this._handleFocusOut}
-               /></li>
-           </span>
-           <span data-id={i.id} onClick={this.deleteItem}>
-             X
-           </span>
-           <div><br/></div>
-         </div>
-
-     ) : null}</ul>
-
-     ////////
-
-
-
-  setting state for completed item
-
-  // handleCompletedItem = (id) => {
-  //   event.target.previousElementSibling.previousElementSibling.firstElementChild.firstElementChild.style.textDecoration = "line-through"
-  //   const newData = this.state.lists.map( list => {
-  //     list.items.map(listItem => {
-  //       if (listItem.id === id) {
-  //         return {...list,}
-  //       }
-  //     })
-  //
-  //     // if (l.id === id)  {
-  //     //   return {...l, completed:!l.completed}
-  //     // } return l
-  //
-  //
-  //   })
-  //
-  //   this.setState({ lists: newData })
-  // }
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

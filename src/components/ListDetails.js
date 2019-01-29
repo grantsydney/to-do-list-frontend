@@ -49,7 +49,7 @@ class ListDetails extends Component {
                 <span data-id={i.id} onClick={this.deleteItem} style={{color:`#${l.color}`}}>x
                 </span>
                 </div>
-                
+
           ))}
           </ul>
         </div>
