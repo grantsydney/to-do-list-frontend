@@ -4,6 +4,8 @@ Features:
 --> to-do lists and items are color-coded
 --> ability to edit an item in-line for a seamless user experience
 
+Rails Back End: https://github.com/sg3957/to-do-list-backend
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
