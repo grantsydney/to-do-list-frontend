@@ -17,15 +17,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Installing
 Backend (https://github.com/sg3957/to-do-list-backend)
+
 $ git clone https://github.com/sg3957/to-do-list-backend.git
+
 $ cd to-do-list-backend
+
 $ bundle install
+
 $ rails s -p 3001
 
 Frontend
+
 $ git clone https://github.com/sg3957/to-do-list-frontend.git
+
 $ cd to-do-list-frontend
+
 $ npm install 
+
 $ npm start
 
 
